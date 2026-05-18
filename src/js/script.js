@@ -8,6 +8,20 @@ import "purecss/build/grids-min.css";
 import "purecss/build/grids-responsive-min.css";
 import "../sass/style.scss"
 
+const burger = document.querySelector(".burger"),
+	close = document.querySelector(".header__menu-close"),
+	menu = document.querySelector(".header__menu");
+
+burger.addEventListener("click", () => {
+	menu.classList.add("header__menu_active");
+	document.body.style.overflow = "hidden";
+});
+
+close.addEventListener("click", () => {
+	menu.classList.remove("header__menu_active");
+	document.body.style.overflow = "";
+});
+
 try {
 	new Swiper(".works__slider", {
 		slidesPerView: 1,
@@ -33,4 +47,19 @@ try {
 		},
 		modules: [Navigation, Pagination],
 	});
+} catch (e) {}
+
+try {
+	const tabs = document.querySelectorAll(".catalog__tab");
+	const contents = document.querySelectorAll(".catalog__content-item");
+
+	tabs.forEach((tab, index) => {
+		tab.addEventListener("click", () => {
+			tabs.forEach((t) => t.classList.remove("catalog__tab_active"));
+			contents.forEach((c) => (c.style.display = "none"));
+			tab.classList.add("catalog__tab_active");
+			contents[index].style.display = "flex";
+		});
+	});
+	contents.forEach((c, i) => (c.style.display = i === 0 ? "flex" : "none"));
 } catch (e) {}
