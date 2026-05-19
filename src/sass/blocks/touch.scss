@@ -2,6 +2,10 @@
 
 .touch {
 	padding-top: 60px;
+	.just-validate-error-field {
+		border: none;
+		outline: 1px solid $ui-error;
+	}
 	&__wrapper {
 		margin-top: 60px;
 	}
@@ -65,7 +69,7 @@
 		a {
 			color: #a22dc6;
 			text-decoration: none;
-			margin-left: 3px;
+			margin-left: 2px;
 		}
 	}
 	&__checkbox {

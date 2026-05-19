@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,8 +10,10 @@
 	<link rel="icon" type="image/x-icon" href="favicon.ico" />
 	<link rel="preconnect" href="https://fonts.googleapis.com" />
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-	<link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,500;1,400&display=swap"
+		rel="stylesheet" />
 </head>
+
 <body>
 	<section class="promo">
 		<img src="/src/img/promo/potter.jpg" alt="potter" class="promo__potter">
@@ -91,32 +94,37 @@
 			<h2 class="title-h2">get in touch</h2>
 			<div class="pure-g touch__wrapper">
 				<div class="pure-u-1 pure-u-xl-1-2 pure-u-xxl-2-5">
-					<img src="/src/img/form/tea.jpg" alt="tea" class="touch__img">
+					<img class="touch__img" src="/src/img/form/tea.jpg" alt="tea" />
 				</div>
 				<div class="pure-u-1 pure-u-xl-1-2 pure-u-xxl-3-5">
-					<form action="#">
+					<form class="touch__form" action="#">
 						<fieldset class="touch__fieldset">
 							<div class="touch__input-block">
 								<label class="touch__label" for="name">Name</label>
 								<input class="touch__input" type="text" id="name" name="name" placeholder="Name"
 									required>
 							</div>
-							<label class="touch__label" for="email">Email</label>
-							<input class="touch__input" type="email" id="email" name="email" placeholder="Email"
-								required>
+							<div class="touch__input-block">
+								<label class="touch__label" for="email">Email</label>
+								<input class="touch__input" type="email" id="email" name="email" placeholder="Email"
+									required>
+							</div>
 						</fieldset>
-						<label class="touch__label" for="question">Youre question</label>
+						<label class="touch__label" for="question">Your question</label>
 						<textarea class="touch__textarea" name="question" id="question" placeholder="Question"
 							required></textarea>
+						<div class="error-message"></div>
+
 						<label class="touch__label touch__check-block" for="checkbox">
-							<input class="touch__checkbox" type="checkbox" id="checkbox" required>
-							I agree with the <a href="#">terms</a>
-						</label>
+							<input required class="touch__checkbox" type="checkbox" id="checkbox" />
+							I agree with the <a href="#">terms</a></label>
+						<div class="checkbox-error-message"></div>
+
 						<button class="btn-send touch__btn">send request</button>
 					</form>
 				</div>
 			</div>
-			<img src="/src/img/form/vase.png" alt="vase" class="touch__decor">
+			<img src="/src/img/form/vase.png" alt="vase" class="touch__decor" />
 		</div>
 	</section>
 	<section class="works">
@@ -156,20 +164,13 @@
 						Keep up to date with news and promotions
 					</div>
 					<form action="#" class="footer__form">
-						<input 
-							placeholder="Enter your e-mail" 
-							type="email" 
-							class="footer__input" 
-							required
-						/>
+						<input placeholder="Enter your e-mail" type="email" class="footer__input" id="footer__email"
+							required>
+						<div class="email-error-message"></div>
 						<label class="footer__check-block" for="footer__checkbox">
-							<input
-								class="footer__checkbox"
-								type="checkbox" 
-								id="footer__checkbox" 
-								required
-							/>
+							<input required class="footer__checkbox" type="checkbox" id="footer__checkbox">
 							I agree with the <a href="#">terms</a></label>
+						<div class="check-error-message"></div>
 						<button class="btn-submit footer__form-btn">submit</button>
 					</form>
 				</div>
@@ -206,17 +207,17 @@
 					<h2 class="footer__header">follow us</h2>
 					<ul class="footer__social-block">
 						<li>
-							<a href="#">
+							<a href="https://www.facebook.com/">
 								<span class="icon-facebook"></span>
 							</a>
 						</li>
 						<li>
-							<a href="#">
+							<a href="https://www.instagram.com/">
 								<span class="icon-instagram"></span>
 							</a>
 						</li>
 						<li>
-							<a href="#">
+							<a href="https://www.pinterest.com/">
 								<span class="icon-pinterest-circled"></span>
 							</a>
 						</li>
@@ -226,6 +227,7 @@
 			<div class="footer__copyright">© Copyright 2025, Ceramic soul</div>
 		</div>
 	</footer>
+
 	<script type="module" src="/src/js/script.js"></script>
 </body>
 
