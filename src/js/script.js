@@ -5,8 +5,6 @@ import JustValidate from "just-validate";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import "purecss/build/grids-min.css";
-import "purecss/build/grids-responsive-min.css";
 import "/src/sass/style.scss";
 
 const burger = document.querySelector(".burger"),
@@ -48,7 +46,7 @@ try {
 		},
 		modules: [Navigation, Pagination],
 	});
-} catch (e) {}
+} catch (e) { }
 
 try {
 	const tabs = document.querySelectorAll(".catalog__tab");
@@ -65,7 +63,7 @@ try {
 	});
 
 	contents.forEach((c, i) => (c.style.display = i === 0 ? "flex" : "none"));
-} catch (e) {}
+} catch (e) { }
 
 try {
 	const validatorTouch = new JustValidate(".touch__form");
@@ -119,8 +117,22 @@ try {
 					.querySelector("#checkbox")
 					.parentElement.parentElement.querySelector(".checkbox-error-message"),
 			}
-		);
-} catch (e) {}
+		)
+		.onSuccess((event) => {
+			const form = event.currentTarget;
+			const formData = new FormData(form);
+			
+			fetch("https://httpbin.org/post", {
+				method: "POST",
+				body: formData,
+			})
+				.then((res) => res.json())
+				.then((data) => {
+					console.log("Success", data);
+					form.reset();
+				});
+		});
+} catch (e) { }
 
 try {
 	const validatorFooter = new JustValidate(".footer__form");
@@ -155,4 +167,4 @@ try {
 					.parentElement.parentElement.querySelector(".check-error-message"),
 			}
 		);
-} catch (e) {}
+} catch (e) { }

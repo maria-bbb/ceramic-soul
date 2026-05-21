@@ -1,20 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<meta name="description" content="Website for Ceramic soul brand" />
 	<meta name="author" content="Awesome student" />
+
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://metatags.io/" />
+	<meta property="og:title" content="Meta Tags — Preview, Edit and Generate" />
+	<meta property="og:description"
+		content="With Meta Tags you can edit and experiment with your content then preview how your webpage will look on Google, Facebook, X and more!" />
+	<meta property="og:image" content="https://metatags.io/images/meta-tags.png" />
+	<meta property="twitter:card" content="summary_large_image" />
+	<meta property="twitter:url" content="https://metatags.io/" />
+	<meta property="twitter:title" content="Meta Tags — Preview, Edit and Generate" />
+	<meta property="twitter:description"
+		content="With Meta Tags you can edit and experiment with your content then preview how your webpage will look on Google, Facebook, X and more!" />
+	<meta property="twitter:image" content="https://metatags.io/images/meta-tags.png" />
+	
 	<title>Catalog</title>
 	<link rel="icon" type="image/x-icon" href="favicon.ico" />
 	<link rel="preconnect" href="https://fonts.googleapis.com" />
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-	<link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,500;1,400&display=swap"
+		rel="stylesheet" />
 </head>
+
 <body>
 	<section class="catalog">
 		<div class="container">
-			<div class="header">
+			<header class="header">
 				<div class="header__menu">
 					<div class="header__menu-close">
 						<span></span>
@@ -22,15 +39,17 @@
 					</div>
 					<nav class="header__menu-nav">
 						<ul>
-							<li><a href="#" class="header__menu-link">catalog</a></li>
-							<li><a href="#" class="header__menu-link">blog</a></li>
-							<li><a href="#" class="header__menu-link">about</a></li>
+							<li><a href="/catalog" class="header__menu-link">catalog</a></li>
+							<li><a href="/blog" class="header__menu-link">blog</a></li>
+							<li><a href="/about" class="header__menu-link">about</a></li>
 						</ul>
 					</nav>
 				</div>
 				<div class="header__top">
-					<div class="burger"><span></span><span></span><span></span></div>
-					<a href="#" class="header__logo"><img src="/src/logo/logo.png" alt="logo" /></a>
+					<div class="burger">
+						<span></span><span></span><span></span>
+					</div>
+					<a href="#" class="header__logo"><img src="/src/logo/logo.png" alt="logo"></a>
 					<div class="header__icons">
 						<a href="#"><span class="icon-search"></span></a>
 						<a href="#"><span class="icon-shopping-bag"></span></a>
@@ -38,12 +57,12 @@
 				</div>
 				<nav class="header__nav">
 					<ul>
-						<li><a href="#" class="header__link">catalog</a></li>
-						<li><a href="#" class="header__link">blog</a></li>
-						<li><a href="#" class="header__link">about</a></li>
+						<li><a href="/catalog" class="header__link">catalog</a></li>
+						<li><a href="/blog" class="header__link">blog</a></li>
+						<li><a href="/about" class="header__link">about</a></li>
 					</ul>
 				</nav>
-			</div>
+			</header>
 			<h1 class="title-h1 catalog__title">our pottery</h1>
 			<div class="catalog__tabs">
 				<button class="catalog__tab catalog__tab_active">for tea</button>
@@ -141,10 +160,10 @@
 					</div>
 					<form action="#" class="footer__form">
 						<input placeholder="Enter your e-mail" type="email" class="footer__input" id="footer__email"
-							required>
+							name="footer__email" required />
 						<div class="email-error-message"></div>
 						<label class="footer__check-block" for="footer__checkbox">
-							<input required class="footer__checkbox" type="checkbox" id="footer__checkbox">
+							<input required class="footer__checkbox" type="checkbox" id="footer__checkbox" />
 							I agree with the <a href="#">terms</a></label>
 						<div class="check-error-message"></div>
 						<button class="btn-submit footer__form-btn">submit</button>
@@ -155,8 +174,8 @@
 						<h2 class="footer__header">discover</h2>
 						<nav class="footer__nav">
 							<ul>
-								<li class="footer__link"><a href="#">About Us</a></li>
-								<li class="footer__link"><a href="#">Blog</a></li>
+								<li class="footer__link"><a href="/about">About Us</a></li>
+								<li class="footer__link"><a href="/blog">Blog</a></li>
 							</ul>
 						</nav>
 					</div>
@@ -164,7 +183,7 @@
 						<h2 class="footer__header">shopping</h2>
 						<nav class="footer__nav">
 							<ul>
-								<li class="footer__link"><a href="#">Catalog</a></li>
+								<li class="footer__link"><a href="/catalog">Catalog</a></li>
 							</ul>
 						</nav>
 					</div>
